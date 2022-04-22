@@ -1,4 +1,9 @@
 #!/bin/bash
+puppet resource package git ensure=present
+puppet resource apache2 ensure=present
+puppet resource service ensure=running
+puppet resource file /testdir/clone ensure=absent force=true
+puppet resource file /testdir/clone ensure=directory
 cd /testdir/clone
 git clone https://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@github.com/faid123/operate_repo.git
 cp -p /testdir/clone/operate_repo/index.html /var/www/html
