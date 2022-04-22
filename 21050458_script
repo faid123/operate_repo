@@ -1,3 +1,4 @@
 #!/bin/bash
 cd /testdir/clone
 git clone https://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@github.com/faid123/operate_repo.git
+cp -p /testdir/clone/operate_repo/index.html /var/www/html
